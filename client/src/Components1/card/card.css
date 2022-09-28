@@ -1,0 +1,47 @@
+.card {
+  /* Sizing */
+  height: 40vh;
+  width: 68vh;
+  margin-top: 50px;
+  --bs-card-border-width: 0%;
+  transform-style: preserve-3d;
+
+  /* Content Alignment */
+  position: relative;
+
+  /* Styling */
+  border-radius: 20px;
+  display: flex;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  /* Sizing */
+  height: 40vh;
+  width: 100%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  /* Alignment */
+  position: absolute;
+
+  /* Content Alignment */
+  display: flex;
+
+
+  /* Content Styling */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card-front {
+  background: linear-gradient(132deg, rgb(113, 143, 175) 0.00%, rgb(69, 92, 114) 100.00%);
+}
+
+.card-back {
+  background-color: #ffad66;
+  transform: rotateY(180deg);
+}

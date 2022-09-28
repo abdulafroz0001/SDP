@@ -1,0 +1,54 @@
+{
+  "attendance": [
+    {
+      "name": "ABDUL AFROZ",
+      "pro":"85",
+      "id": 2100030001
+    },
+    {
+      "name": "PARISA JEEVAN SRAVANTH",
+      "pro":"80",
+      "id": 2100030402
+    },
+    {
+      "name": "JALADI SRI MOKSHAGNA",
+      "pro":"75",
+      "id": 2100031166
+    },
+    {
+      "name": "RALLABHANDI SIVA SANKARA BHARADWAJ",
+      "pro":"93",
+      "id": 2100030455
+    },
+    {
+      "name": "ABDUL AFROZ",
+      "pro":"85",
+      "id": 2100030002
+    },
+    {
+      "name": "PARISA JEEVAN SRAVANTH",
+      "pro":"80",
+      "id": 2100030403
+    },
+    {
+      "name": "JALADI SRI MOKSHAGNA",
+      "pro":"75",
+      "id": 2100031167
+    },
+    {
+      "name": "RALLABHANDI SIVA SANKARA BHARADWAJ",
+      "pro":"93",
+      "id": 2100030456
+    },
+    {
+      "name": "ABDUL AFROZ",
+      "pro":"85",
+      "id": 2100030003
+    },
+    {
+      "name": "PARISA JEEVAN SRAVANTH",
+      "pro":"80",
+      "id": 2100030404
+    }
+  ]
+}

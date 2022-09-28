@@ -1,0 +1,173 @@
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+.section
+{
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display:flex;
+  margin-left: 0px;
+  margin-right: 0px;
+  --bs-gutter-x: 0rem;
+}
+.Home
+{
+ /* Created with https://www.css-gradient.com */
+background: #ABC4E8;
+background: -webkit-linear-gradient(top left, #ABC4E8, #88CFF7);
+background: -moz-linear-gradient(top left, #ABC4E8, #88CFF7);
+background: linear-gradient(to bottom right, #ABC4E8, #88CFF7);
+}
+main{
+  width: 100%;
+  padding: 20px;
+}
+.sidebar{
+/* Created with https://www.css-gradient.com */
+background: #467EE3;
+background: -webkit-linear-gradient(top right, #467EE3, #878CC4);
+background: -moz-linear-gradient(top right, #467EE3, #878CC4);
+background: linear-gradient(to bottom left, #467EE3, #878CC4);
+  color: rgb(55, 51, 51);
+  height: 100vh;
+  width: 200vh;
+  transition: all 0.5s;
+}
+.top_section{
+  display: flex;
+  align-items:center;
+  padding:20px 15px;
+}
+.logo{
+  font-size: 30px;
+}
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.link:hover{
+  background:lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active{
+  background: lightskyblue;
+  color: rgb(85, 79, 208);
+}
+.icon{
+  font-size: 25px;
+}
+.link_text
+{
+  font-size: 20px
+}
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.custom-btn {
+  width: 170px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  margin-right: 10%;
+  margin-bottom: 10px;
+}
+button {
+  margin: 20px;
+  outline: none;
+}
+
+.btn-6 {
+  background: #000;
+ color: #fff;
+ line-height: 42px;
+ padding: 0;
+ border: none;
+}
+.btn-6 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+ position: absolute;
+ content: "";
+ height: 0%;
+ width: 2px;
+ background: #000;
+}
+.btn-6:before {
+ right: 0;
+ top: 0;
+ transition: all 500ms ease;
+}
+.btn-6:after {
+ left: 0;
+ bottom: 0;
+ transition: all 500ms ease;
+}
+.btn-6:hover{
+ color: #000;
+ background: transparent;
+}
+.btn-6:hover:before {
+ transition: all 500ms ease;
+ height: 100%;
+}
+.btn-6:hover:after {
+ transition: all 500ms ease;
+ height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+ position: absolute;
+ content: "";
+ background: #000;
+}
+.btn-6 span:before {
+ left: 0;
+ top: 0;
+ width: 0%;
+ height: 2px;
+ transition: all 500ms ease;
+}
+.btn-6 span:after {
+ right: 0;
+ bottom: 0;
+ width: 0%;
+ height: 2px;
+ transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+ width: 100%;
+}
+.btn-6 span:hover:after {
+ width: 100%;
+}
+
