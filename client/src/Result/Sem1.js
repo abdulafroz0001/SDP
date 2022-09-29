@@ -3,31 +3,31 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Stack from '@mui/material/Stack';
 import Result from './Result';
-function Resultout() {
+function Sem1() {
     return (
-        <div>
+        <div >
             <Box sx={{ flexGrow: 1 }}>
                 <Stack spacing={2}>
                     <Grid container spacing={2}>
                         <Grid xs>
-                            <Result name="DAA" code="21CS2214AA	" grade="+A" />
+                            <Result name="CTSD" code="21CS2214AA	" grade="+A" type="success" msg="Passed"   />
                         </Grid>
                         <Grid xs>
-                            <Result name="OS" code="21CS2109AA	" grade="+A" />
+                            <Result name="DLP" code="21CS2109AA	" grade="+A" type="error" msg="Failed"  />
                         </Grid>
                         <Grid xs>
-                            <Result name="CNS" code="21CS2212RA	" grade="+A" />
+                            <Result name="MFC" code="21CS2212RA	" grade="+A" type="success" msg="Passed" />
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
                         <Grid xs>
-                            <Result name="MERN" code="21TS2202AA	" grade="+A" />
+                            <Result name="DTW-1" code="21TS2202AA	" grade="+A" type="success" msg="Passed" />
                         </Grid>
                         <Grid xs>
-                            <Result name="DBMS" code="21CS2204RA	" grade="+A" />
+                            <Result name="IPE" code="21CS2204RA	" grade="+A" type="success" msg="Passed" />
                         </Grid>
                         <Grid xs>
-                            <Result name="MP" code="21CS2204RA	" grade="+A" />
+                            <Result name="DTI" code="21CS2204RA	" grade="+A" type="success" msg="Passed" />
                         </Grid>
                     </Grid>
 
@@ -37,4 +37,4 @@ function Resultout() {
     )
 }
 
-export default Resultout
+export default Sem1

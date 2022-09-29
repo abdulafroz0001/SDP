@@ -4,6 +4,8 @@ import {
     FaRegChartBar,
 
 }from "react-icons/fa";
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import LoginIcon from '@mui/icons-material/Login';
 import {GrHomeRounded} from 'react-icons/gr'
 import {GiNotebook} from 'react-icons/gi'
 import {SiBookmeter} from 'react-icons/si'
@@ -32,7 +34,12 @@ const Sidebar = ({children}) => {
         {
             path:"/login",
             name:"Login",
-            icon:<SiBookmeter/>
+            icon:<LoginIcon/>
+        },
+        {
+            path:"/register",
+            name:"Register",
+            icon:<HowToRegIcon/>
         },
         
     ]

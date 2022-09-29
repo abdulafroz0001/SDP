@@ -14,8 +14,8 @@ function Result(props) {
                 <h5 className='result' >
                     Grade: {props.grade}
                 </h5>
-                <Alert variant="filled" severity="success" style={{justifySelf:"center",justifyContent:"center",alignItems:"center",background:"rgba(0,128,0,0.7)",paddingTop:'3%',width:'20vw',marginLeft:'6%',borderRadius:50 }}>
-                     Passed   — check it out!
+                <Alert variant="filled" severity={props.type} style={{justifySelf:"center",justifyContent:"center",alignItems:"center",paddingTop:'3%',width:'20vw',marginLeft:'6%',borderRadius:50 }}>
+                     {props.msg}
                 </Alert>
             </Paper>
         </div >
