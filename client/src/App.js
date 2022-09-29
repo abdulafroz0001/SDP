@@ -10,6 +10,8 @@ import Custom from './Attend/Custom';
 import Dialog from './Attend/Dialog';
 import Section from './Attend/Section';
 import PrivateRoutes from './Protected Route/PrivateRoutes';
+import Result from './Result/Result';
+import Resultout from './Result/Sem3';
 const App = () => {
   return (
     <div className='Home'>
@@ -23,7 +25,9 @@ const App = () => {
               <Route path="/sec/fatt" element={<Custom />} />
               <Route path="/satt" element={<Status />} />
             </Route>
-            <Route path='/login' element={<Login />} />
+            <Route path='/login' element={<Login />}/>
+            <Route path='/time' element={<Resultout />}/>
+            <Route path='/result' element={<Result />}/>
             <Route path='/sec/fatt/alter' element={<Dialog />} />
           </Routes>
         </Sidebar>

@@ -3,6 +3,13 @@
   padding:0;
   text-decoration: none;
 }
+.result
+{
+  display: flex;
+  margin-left: 5%;
+  padding-bottom: 3%;
+
+}
 .section
 {
   
