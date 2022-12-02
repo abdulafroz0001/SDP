@@ -6,7 +6,7 @@ import { Paper, Grid } from "@mui/material";
 import Progress from "./Progress";
 import CardBack from "./CardBack";
 const percentage = 85;
-function Card({ onClick }) {
+function Card({ onClick },props) {
   return (
     <div className="card" onClick={onClick}>
       <div className="card-back">
@@ -23,7 +23,7 @@ function Card({ onClick }) {
               <div style={{ width: "80%", margin: 'auto' }} >
                 
                 <h5>Skill</h5>
-                <Progress done={75} />
+                <Progress done={85} />
                 <h5>Practical</h5>
                 <Progress done={75} />
 

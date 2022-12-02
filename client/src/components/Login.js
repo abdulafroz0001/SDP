@@ -13,6 +13,8 @@ import gradient, { useGradientBtnStyles } from '@mui-treasury/styles/button/grad
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useToken } from '../auth/useToken';
 import './bg.css';
 
 function Login() {
@@ -21,26 +23,23 @@ function Login() {
     const paperStyle = { padding: 10, height: '100%', width: '100%', background: 'rgb(187,221,233)' }
     const styles1 = useShadeInputBaseStyles();
     const chubbyStyles = useGradientBtnStyles({ chubby: true });
-    const submitHandler = (e) => {
-        e.preventDefault();
-        const id = e.target.id.value
-        console.log(id);
-        axios.get('/satt', {
-            id
+    const [idValue, setidValue] = useState('');
+    const [passwordValue, setPasswordValue] = useState('');
 
-        })
-            .then(res => {
-                console.log(res)
-            })
-            .catch(error => {
-                console.log(error);
-            });
+    const [token, setToken] = useToken();
+    const navigate= useNavigate();
+    const onLogInClicked = async () => {
+        const response = await axios.post('/login', {
+            username: idValue,
+            password: passwordValue,
+        });
+        const { token } = response.data;
+        setToken(token);
+        navigate('/');
     }
-
-
     return (
         <div className='log'>
-            <div1>
+            <div>
                 <center>
                     <Paper style={style}>
                         <img src={poster} style={{ width: "65%" }} />
@@ -50,11 +49,16 @@ function Login() {
                                     <img src={AdbIcon} style={{ width: "50%", height: "100", borderRadius: 150 }} />
                                     <h2>Log In</h2>
                                 </Grid>
-                                <form onSubmit={submitHandler}>
-                                    <InputBase id='id' classes={styles1} style={{ borderRadius: 10 }}  placeholder={'Enter ID'} halfWidth required />
+                                <form >
+                                    <InputBase id='id' classes={styles1} style={{ borderRadius: 10 }} value={idValue}
+                                        onChange={e => setidValue(e.target.value)} placeholder={'Enter ID'} halfWidth required />
                                     <Box pb={1} />
                                     <br></br>
-                                    <InputBase type='password' classes={styles1} style={{ borderRadius: 10 }} placeholder={'Enter Password'} halfWidth required />
+                                    <InputBase type='password' classes={styles1} style={{ borderRadius: 10 }}
+                                        value={passwordValue}
+
+                                        onChange={e => setPasswordValue(e.target.value)}
+                                        placeholder={'Enter Password'} halfWidth required />
                                     <Box pb={1} />
                                     <br></br>
                                     <br></br>
@@ -69,12 +73,13 @@ function Login() {
                                     /><br></br>
                                     <br></br>
                                     <br></br>
-                                    <Link to='/' style={{textDecoration:'none'}} >
-                                    <Button onClick={() =>
-                                        console.log("submit") 
+                                    <Link to='/' style={{ textDecoration: 'none' }} >
+                                        <Button
+                                            disabled={!idValue || !passwordValue}
+                                            onClick={onLogInClicked}
 
-                                    } type='submit' classes={chubbyStyles} style={{ background: 'linear-gradient(127.43deg, #00D5C8 100%, #2200AA 0%)', width: "50%", height: "45px", marginBottom: 10 }} >
-                                        Log In
+                                            classes={chubbyStyles} style={{ background: 'linear-gradient(127.43deg, #00D5C8 100%, #2200AA 0%)', width: "50%", height: "45px", marginBottom: 10 }} >
+                                            Log In
                                         </Button></Link>
                                     <br></br>
                                     <br></br>
@@ -88,7 +93,7 @@ function Login() {
                         </Grid>
                     </Paper>
                 </center>
-            </div1>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const FacultySchema = mongoose.Schema({
-    FacultyId: {
+const AdminSchema = mongoose.Schema({
+    AdminId: {
         type: String,
         required: true
     },
@@ -46,5 +46,5 @@ const FacultySchema = mongoose.Schema({
     }
 
 });
-const Faculty = mongoose.model("Faculty", FacultySchema);
-module.exports = Faculty;
+const Admin = mongoose.model("Admin", AdminSchema);
+module.exports = Admin;

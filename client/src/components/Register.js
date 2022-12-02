@@ -19,7 +19,7 @@ function Register() {
     const gender = e.target.gender.value
     const user = e.target.user.value
     const address = e.target.address.value
-    axios.post('/new', {
+    axios.post('/register', {
       fname,
       lname,
       idnum,
@@ -42,12 +42,12 @@ function Register() {
   const avatarStyle = { backgroundColor: 'violet' }
   return (
     <Grid>
-      <Paper elevation={24} style={{ padding: 20, width: '40vw', margin: "20px auto", borderRadius: "4%", background: 'linear-gradient(to top, rgba(168, 237, 234, 0.45), rgba(254, 214, 227, 0.45))' }}>
+      <Paper elevation={20} style={{ padding: 20, width: '40vw', margin: "20px auto", borderRadius: "4%", background: 'linear-gradient(to top, rgba(168, 237, 234, 0.45), rgba(254, 214, 227, 0.45))' }}>
         <Grid align='center'>
           <Avatar style={avatarStyle}><InsertEmoticonIcon></InsertEmoticonIcon></Avatar>
           <h2 style={{ margin: 0 }}>Register</h2><br></br>
         </Grid>
-        <Grid style={{ marginTop: 0 }}>
+        <Grid style={{ marginTop: -10 }}>
         </Grid>
         <form onSubmit={submitHandler}>
           <TextField id='fname' label='First Name' placeholder="Enter your First name" style={{ width: '18vw', marginTop: '0.5vw', marginRight: '0.5vw' }} />
@@ -73,17 +73,18 @@ function Register() {
               <FormControlLabel value="Student" control={<Radio />} label="Student" />
               <FormControlLabel value="Faculty" control={<Radio />} label="Faculty" />
               <FormControlLabel value="Employee" control={<Radio />} label="Employee" />
+              <FormControlLabel value="Admin" control={<Radio />} label="Admin" />
             </RadioGroup>
           </FormControl>
 
-          <TextField id='age' label="Age" type="text" placeholder=" Age" style={{ marginTop: 15, marginLeft: '1vw', width: "10vw" }} />
+          <TextField id='age' label="Age" type="text" placeholder=" Age" style={{ marginTop: -5,marginBottom:5, marginLeft: '1vw', width: "10vw" }} />
 
 
           <TextField id='address' label="Address" multiline rows={2} placeholder="Enter Your Current Address" style={{ width: "38vw" }} />
 
 
           <div>
-            <Button type='submit' variant='contained' style={{ marginBottom: 10, marginTop: 5, padding: 12, background: 'linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5)' }} fullWidth > Submit</Button>
+            <Button type='submit' variant='contained' style={{ marginBottom: 5, marginTop: 5, padding: 10, background: 'linear-gradient(to right, rgba(55, 236, 186, 0.5), rgba(114, 175, 211, 0.5)' }} fullWidth > Submit</Button>
           </div>
 
         </form>

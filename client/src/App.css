@@ -26,10 +26,16 @@
 .Home
 {
  /* Created with https://www.css-gradient.com */
-background: #ABC4E8;
+/* background: #ABC4E8;
 background: -webkit-linear-gradient(top left, #ABC4E8, #88CFF7);
 background: -moz-linear-gradient(top left, #ABC4E8, #88CFF7);
-background: linear-gradient(to bottom right, #ABC4E8, #88CFF7);
+background: linear-gradient(to bottom right, #ABC4E8, #88CFF7); */
+/* background:  url("https://wallpapercave.com/wp/wp2757874.gif");
+background-size: cover;
+background-position: center; */
+background:  url("https://images.pexels.com/photos/2088205/pexels-photo-2088205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+background-size: cover;
+background-position: center;
 }
 main{
   width: 100%;
@@ -37,11 +43,15 @@ main{
 }
 .sidebar{
 /* Created with https://www.css-gradient.com */
-background: #467EE3;
+background: #ef2731;
+background: -webkit-linear-gradient(top right, #26c8da, #7f0039);
+background: -moz-linear-gradient(top right, #35d5f5, #0885a4);
+background: linear-gradient(to bottom left, #2fc3da, #1e9db9);
+/* background: #467EE3;
 background: -webkit-linear-gradient(top right, #467EE3, #878CC4);
 background: -moz-linear-gradient(top right, #467EE3, #878CC4);
-background: linear-gradient(to bottom left, #467EE3, #878CC4);
-  color: rgb(55, 51, 51);
+background: linear-gradient(to bottom left, #467EE3, #878CC4); */
+  color: rgb(24, 19, 19);
   height: 100vh;
   width: 200vh;
   transition: all 0.5s;
@@ -77,11 +87,11 @@ background: linear-gradient(to bottom left, #467EE3, #878CC4);
   color: rgb(85, 79, 208);
 }
 .icon{
-  font-size: 25px;
+  font-size: 20px;
 }
 .link_text
 {
-  font-size: 20px
+  font-size: 17px
 }
 .frame {
   width: 90%;

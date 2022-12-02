@@ -22,7 +22,7 @@ function Section() {
     };
     return (
         <div>
-            <Paper elevation={12} style={{ background: "rgba(255,255,255,0.3)", marginTop: '10%', paddingTop: '3%', width: '50vw', height: '32.5vw', marginLeft: '25%' }} >
+            <Paper elevation={12} style={{ background: "rgba(255,255,255,0.8)", marginTop: '10%', paddingTop: '3%', width: '50vw', height: '32.5vw', marginLeft: '25%' }} >
 
                 <h4 className='section' style={{ marinTop: '5%' }} >
                     Select Academic Year

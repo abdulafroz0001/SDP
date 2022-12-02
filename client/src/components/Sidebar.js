@@ -4,8 +4,13 @@ import {
     FaRegChartBar,
 
 }from "react-icons/fa";
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-import LoginIcon from '@mui/icons-material/Login';
+import {CgProfile} from 'react-icons/cg'
+import {RiAdminFill} from 'react-icons/ri'
+import {AiOutlineForm} from 'react-icons/ai'
+import {AiOutlineFileDone} from 'react-icons/ai'
+import {BsGraphUp} from 'react-icons/bs'
+import { BiLogOutCircle } from "react-icons/bi";
+
 import {GrHomeRounded} from 'react-icons/gr'
 import {GiNotebook} from 'react-icons/gi'
 import {SiBookmeter} from 'react-icons/si'
@@ -24,22 +29,33 @@ const Sidebar = ({children}) => {
         {
             path:"/satt",
             name:"SAttendance",
-            icon:<GiNotebook/>
+            icon:<AiOutlineFileDone/>
+        },
+        {
+            path:"/result",
+            name:"Results",
+            icon:<BsGraphUp/>
         },
         {
             path:"/sec",
             name:"FAttendance",
-            icon:<SiBookmeter/>
+            icon:<AiOutlineForm/>
         },
         {
-            path:"/login",
-            name:"Login",
-            icon:<LoginIcon/>
+            path:"/profile",
+            name:"Profile",
+            icon:<CgProfile/>
+        },
+        
+        {
+            path:"/admin/getAll",
+            name:"Admin",
+            icon:<RiAdminFill/>
         },
         {
-            path:"/register",
-            name:"Register",
-            icon:<HowToRegIcon/>
+            path:"/logout",
+            name:"Logout",
+            icon:<BiLogOutCircle/>
         },
         
     ]
@@ -59,6 +75,7 @@ const Sidebar = ({children}) => {
                            <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
                        </NavLink>
                    ))
+                   
                }
            </div>
            <main>{children}</main>

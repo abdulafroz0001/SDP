@@ -1,13 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Tempcard from './Tempcard'
 import { Grid } from '@mui/material'
 import { Paper } from '@mui/material'
 import { Link } from 'react-router-dom'
 function Home() {
+
   return (
 
     <div style={{ marginLeft: 20 }}>
-      <Paper elevation={2} style={{ background: 'rgba(255,255,255,0.0)', borderRadius: 2, marginTop: "10%", padding: 0 }}>
+      <Paper elevation={2} style={{ background: 'rgba(255,255,255,0.3)', borderRadius: 2, marginTop: "10%", padding: 0,paddingBottom:20 }}>
         <Grid container spacing={5} style={{ marginLeft: "5%" }}>
           <Grid item  >
             <Link to='/satt' style={{ textdecration: 'none' }} >
